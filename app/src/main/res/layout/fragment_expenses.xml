@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Activity.GroupActivity">
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:id="@+id/expensesLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        >
+
+        <!-- New layout for balance box and buttons -->
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:id="@+id/balanceBoxLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_margin="@dimen/spacing_6"
+            android:paddingHorizontal="@dimen/spacing_4"
+            android:paddingVertical="@dimen/spacing_2"
+            android:background="@drawable/rounded_corners">
+
+            <TextView
+                android:id="@+id/balanceLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/expenses_balance_widget_label"
+                android:textSize="@dimen/expenses_balance_widget_label"
+                android:textColor="@android:color/black"
+                android:layout_marginBottom="8dp"/>
+
+            <TextView
+                android:id="@+id/balanceAmount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/expenses_balance_widget_amount"
+                android:textColor="@android:color/black"
+                android:layout_marginBottom="@dimen/spacing_4"/>
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/addExpenseButton"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/expenses_balance_widget_add_expense"
+                    app:icon="@drawable/ic_add"
+                    app:iconPadding="@dimen/spacing_2"
+                    android:backgroundTint="@color/colorPrimary"
+                    app:cornerRadius="@dimen/button_corner_radius"
+                    />
+
+                <Space
+                    android:layout_width="8dp"
+                    android:layout_height="wrap_content"/>
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/settleUpButton"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/expenses_balance_widget_settle_up"
+                    app:icon="@drawable/ic_settle_up"
+                    app:iconTint="@color/colorPrimary"
+                    app:iconPadding="@dimen/spacing_2"
+                    android:textColor="@color/colorPrimary"
+                    android:backgroundTint="@android:color/white"
+                    app:cornerRadius="@dimen/button_corner_radius"
+                    />
+            </androidx.appcompat.widget.LinearLayoutCompat>
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:contentDescription="@string/border_content_description"
+            android:src="@drawable/bottom_border"
+            />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/expenses_expenses"
+            android:layout_marginTop="@dimen/spacing_3"
+            android:layout_marginBottom="@dimen/spacing_2"
+            android:layout_marginHorizontal="@dimen/spacing_5"
+            android:textColor="@color/colorPrimary"
+            />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/emptyMessageTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/expenses_no_expenses_yet"
+            android:visibility="gone"
+            android:layout_gravity="center"
+            android:textSize="@dimen/empty_text_view_size"
+            android:textColor="@android:color/black"
+            android:layout_margin="@dimen/spacing_4"/>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/expensesRecyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            />
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+</FrameLayout>

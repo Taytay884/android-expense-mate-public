@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Activity.GroupActivity">
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:id="@+id/participantsLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        >
+
+        <com.google.android.material.textview.MaterialTextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/balances_participants"
+            android:layout_marginTop="@dimen/spacing_3"
+            android:layout_marginBottom="@dimen/spacing_2"
+            android:layout_marginHorizontal="@dimen/spacing_5"
+            android:textColor="@color/colorPrimary"
+            />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/participantsRecyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            />
+
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:contentDescription="@string/border_content_description"
+            android:src="@drawable/bottom_border"
+            />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/balances_settles"
+            android:layout_marginTop="@dimen/spacing_3"
+            android:layout_marginBottom="@dimen/spacing_2"
+            android:layout_marginHorizontal="@dimen/spacing_5"
+            android:textColor="@color/colorPrimary"
+            />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/emptyMessageTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/balances_no_settles_yet"
+            android:visibility="gone"
+            android:layout_gravity="center"
+            android:textSize="@dimen/empty_text_view_size"
+            android:textColor="@android:color/black"
+            android:layout_margin="@dimen/spacing_4"/>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/settleUpsRecyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            />
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+</FrameLayout>

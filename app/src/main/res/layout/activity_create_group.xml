@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.appbar.AppBarLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Activity.CreateGroupActivity">
+
+    <com.google.android.material.appbar.MaterialToolbar
+        android:id="@+id/topAppBar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        app:navigationIconTint="@android:color/white"
+        app:title="Create group"
+        app:titleTextColor="@android:color/white"
+        android:background="@color/colorPrimary"
+        />
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        >
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/spacing_5"
+            android:layout_marginTop="@dimen/spacing_3"
+            app:hintEnabled="true"
+            android:hint="@string/input_hint_email">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/email"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textEmailAddress"
+                android:padding="@dimen/spacing_3" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <!-- Create Group button at the bottom -->
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/addGroupParticipant"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/create_group_add_group_participant"
+            app:cornerRadius="@dimen/button_corner_radius"
+            android:padding="@dimen/spacing_3"
+            android:layout_marginHorizontal="@dimen/spacing_5"
+            android:layout_marginVertical="@dimen/spacing_3"
+            android:backgroundTint="@color/colorPrimary"
+            android:textColor="@android:color/white" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:orientation="horizontal"
+            android:paddingHorizontal="0dp"
+            >
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:contentDescription="@string/border_content_description"
+                android:src="@drawable/bottom_border"
+                />
+
+        </LinearLayout>
+
+        <com.google.android.material.textview.MaterialTextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/create_group_participants"
+            android:layout_marginTop="@dimen/spacing_3"
+            android:layout_marginBottom="@dimen/spacing_2"
+            android:layout_marginHorizontal="@dimen/spacing_5"
+            android:textColor="@color/colorPrimary"
+            />
+
+        <!-- Note: A RecyclerView can also be used -->
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/participants"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <!-- Scrollable content -->
+
+        </androidx.recyclerview.widget.RecyclerView>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:orientation="horizontal"
+            android:paddingHorizontal="0dp"
+            >
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:contentDescription="@string/border_content_description"
+                android:src="@drawable/bottom_border"
+                />
+
+        </LinearLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/spacing_5"
+            android:layout_marginVertical="@dimen/spacing_3"
+            app:hintEnabled="true"
+            android:hint="@string/create_group_hint_group_name">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/groupName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="text"
+                android:padding="@dimen/spacing_3" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <!-- Create Group button at the bottom -->
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/createGroup"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/create_group_create_group"
+            app:cornerRadius="@dimen/button_corner_radius"
+            android:padding="@dimen/spacing_3"
+            android:layout_marginHorizontal="@dimen/spacing_5"
+            android:layout_marginBottom="@dimen/spacing_3"
+            android:backgroundTint="@color/colorPrimary"
+            android:textColor="@android:color/white" />
+
+
+        <!-- ProgressBar for Loading Time -->
+        <com.google.android.material.progressindicator.CircularProgressIndicator
+            android:id="@+id/progressBar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:visibility="gone" />
+
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+</com.google.android.material.appbar.AppBarLayout>

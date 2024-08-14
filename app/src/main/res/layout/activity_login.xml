@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.circularreveal.CircularRevealRelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:padding="@dimen/spacing_4"
+    tools:context=".Activity.LoginActivity">
+
+    <!-- Centered content container -->
+    <com.google.android.material.circularreveal.CircularRevealLinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:orientation="vertical">
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/welcomeText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/login_welcome"
+            android:textSize="@dimen/login_title_text_size"
+            android:textColor="@android:color/black"
+            android:layout_marginTop="@dimen/spacing_6"
+            android:textStyle="bold" />
+
+        <!-- Container for loginPrompt and createAccount in the same row -->
+        <com.google.android.material.circularreveal.CircularRevealLinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/loginPrompt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/title_login_below_or"
+                android:layout_marginRight="3dp"
+                android:textSize="@dimen/login_sub_title_text_size"
+                android:textColor="@android:color/black" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/createAccount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/login_create_an_account"
+                android:textSize="@dimen/login_sub_title_text_size"
+                android:textColor="@color/colorPrimary"
+                />
+
+        </com.google.android.material.circularreveal.CircularRevealLinearLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/spacing_6"
+            app:hintEnabled="true"
+            android:hint="@string/input_hint_email">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/email"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textEmailAddress"
+                android:padding="@dimen/spacing_3" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/passwordContainer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/spacing_4"
+            app:endIconMode="password_toggle"
+            android:hint="@string/input_hint_password">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/password"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textPassword"
+                android:padding="@dimen/spacing_3" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+    </com.google.android.material.circularreveal.CircularRevealLinearLayout>
+
+    <!-- Sign In button at the bottom -->
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/login"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/login_sign_in"
+        android:layout_alignParentBottom="true"
+        android:layout_marginTop="@dimen/spacing_6"
+        app:cornerRadius="@dimen/button_corner_radius"
+        android:padding="@dimen/spacing_3"
+        android:backgroundTint="@color/colorPrimary"
+        android:textColor="@android:color/white" />
+
+    <!-- ProgressBar for Loading Time -->
+    <com.google.android.material.progressindicator.CircularProgressIndicator
+        android:id="@+id/progressBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:visibility="gone" />
+
+</com.google.android.material.circularreveal.CircularRevealRelativeLayout>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="spacing_2">8dp</dimen>
+    <dimen name="spacing_3">12dp</dimen>
+    <dimen name="spacing_4">16dp</dimen>
+    <dimen name="button_corner_radius">6dp</dimen>
+    <dimen name="avatar_size">48dp</dimen>
+    <dimen name="list_item_main_text_size">16sp</dimen>
+    <dimen name="list_item_sub_text_size">14sp</dimen>
+    <dimen name="list_item_icon_size">24dp</dimen>
+    <dimen name="spacing_5">20dp</dimen>
+    <dimen name="spacing_6">24dp</dimen>
+    <dimen name="expenses_balance_widget_label">14sp</dimen>
+    <dimen name="expenses_balance_widget_amount">32sp</dimen>
+    <dimen name="empty_text_view_size">16sp</dimen>
+    <dimen name="login_title_text_size">24sp</dimen>
+    <dimen name="login_sub_title_text_size">16sp</dimen>
+    <dimen name="section_label_text_size">18sp</dimen>
+</resources>
